@@ -4,9 +4,9 @@ public class Empleado {
 	
 	//Attributes
 	
-	int id;
-	String nombre;
-	int edad;
+	private int id;
+	private String nombre;
+	private int edad;
 	
 	//get set encapsulamiento
 	public int getId() {
