@@ -7,14 +7,33 @@ public class Empleado {
 	private int id;
 	private String nombre;
 	private int edad;
+	public static int cont=999;
+	 
+
+	//constructores
+	public Empleado() 
+	{
+		cont ++;
+		this.id=cont;
+		this.nombre="sin nombre";
+		this.edad=99;
+	}
 	
-	//get set encapsulamiento
+	public Empleado(String nombre,int edad) 
+	{
+		cont ++;
+		this.id=cont;
+		this.nombre=nombre;
+		this.edad=edad;
+
+	}
+	
+	// metodos get set encapsulamiento(elimine el set de id, ya que debe autogenerarse)
+	
 	public int getId() {
 		return id;
 	}
-	public void setId(int id) {
-		this.id = id;
-	}
+	
 	public String getNombre() {
 		return nombre;
 	}
@@ -27,9 +46,14 @@ public class Empleado {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+
+	//metodo tostring devuelve informacion del objeto
+	@Override
+	public String toString() {
+		return "Empleado [id=" + id + ", nombre=" + nombre + ", edad=" + edad + "]";
+	}
 	
-	//probando cambios en git
 	
-	// tambien estoy probando commiteos
+
 
 }
