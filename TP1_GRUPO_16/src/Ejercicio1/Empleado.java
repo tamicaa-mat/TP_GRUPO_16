@@ -46,6 +46,17 @@ public class Empleado {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
+	
+	
+	 // Método que genera el próximo ID
+    private static int devuelveProximoID() {
+        cont++;
+        return cont;
+    }
+	
+	
+	
+	
 
 	//metodo tostring devuelve informacion del objeto
 	@Override
