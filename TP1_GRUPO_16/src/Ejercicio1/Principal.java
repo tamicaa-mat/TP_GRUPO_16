@@ -1,10 +1,7 @@
 package Ejercicio1;
 
-
 public class Principal {
 
-	
-	
 public static void main(String[] Args) {
 		
 		Empleado empleado1 = new Empleado();
@@ -22,6 +19,8 @@ public static void main(String[] Args) {
 		System.out.println(empleado2.toString());
 		System.out.println(empleado3.toString());
 		System.out.println(empleado4.toString());
+		
+		System.out.println("El proximo ID sera el " + Empleado.devuelveProximoID());
 		
 	}
 }
