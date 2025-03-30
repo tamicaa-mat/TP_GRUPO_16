@@ -15,7 +15,7 @@ public class Empleado {
 	public Empleado() {
 		this.ID = cont++;
 		this.nombre = "";
-		this.edad = 21;
+		this.edad = 99;
 	}
 	/**
 	 * Constructor que instancia un empleado con nombre, edad y el nuevo ID generado.
@@ -26,6 +26,12 @@ public class Empleado {
 		this.ID = cont++;
 		setNombre(nombre);
 		setEdad(edad);
+	}
+	//Constructor que solo recibe nombre como parametro y se asigna una edad por defecto
+	public Empleado(String nombre) {
+		this.ID = cont++;
+		setNombre(nombre);
+		this.edad=99;
 	}
 	/**
 	 * Método que devuelve el nombre del empleado.
@@ -49,11 +55,11 @@ public class Empleado {
 		this.nombre = nombre.isEmpty() ? "sin nombre" : nombre;
 	}
 	/**
-	 * Cambia la edad del empleado, si la edad es negativa se le asignara el "21".
+	 * Cambia la edad del empleado, si la edad es negativa se le asignara el "99".
 	 * @param edad (int)
 	 */
 	public void setEdad(int edad) {
-		this.edad = edad < 0 ? 21 : edad;
+		this.edad = edad < 0 ? 99 : edad;
 	}
 	/**
 	 * Genera el próximo ID para el nuevo empleado, comienza con el ID 1000
@@ -71,6 +77,6 @@ public class Empleado {
 	public String toString() { 
 		return "Empleado " + nombre + ", edad: " + edad + ", legajo: " + ID;
 	}
-	
+
 }
 

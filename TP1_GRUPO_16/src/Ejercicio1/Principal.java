@@ -4,25 +4,24 @@ public class Principal {
 
 public static void main(String[] Args) {
 		
-		Empleado empleado1 = new Empleado();
-		Empleado empleado2 = new Empleado();
-		Empleado empleado3 = new Empleado();
-		Empleado empleado4 = new Empleado();
-		
-		Empleado empleadoParametrosIncorrectos = new Empleado("", -1);
-		
-		empleado1.setNombre("Homero Simp");
-		empleado2.setNombre("Franco Cruz");
-		empleado3.setNombre("Selena Maria");
-		
-		empleado4.setNombre("");
-		empleado4.setEdad(-1);
+		Empleado[] vEmpleado = new Empleado[6];
 	
-		System.out.println(empleado1.toString());
-		System.out.println(empleado2.toString());
-		System.out.println(empleado3.toString());
-		System.out.println(empleado4.toString());
-		System.out.println(empleadoParametrosIncorrectos.toString());
+		vEmpleado[0] = new Empleado();
+		vEmpleado[1] = new Empleado();
+		vEmpleado[2] = new Empleado();
+		vEmpleado[3] = new Empleado();
+		vEmpleado[4] = new Empleado("", -1);
+		vEmpleado[5] = new Empleado("Jorge");
+		
+		vEmpleado[0].setNombre("Homero Simp");
+		vEmpleado[1].setNombre("Franco Cruz");
+		vEmpleado[2].setNombre("Selena Maria");
+		vEmpleado[3].setNombre("");
+		vEmpleado[3].setEdad(-1);
+		
+		for (Empleado empleado : vEmpleado) {
+			System.out.println(empleado.toString());
+		}
 		
 		System.out.println("El proximo ID sera el " + Empleado.devuelveProximoID());
 		
